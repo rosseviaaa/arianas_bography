@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariana's Biography 𐙚</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fcdee0;
+        }
+
+        .container {
+            width: 1000px;
+            height: 1870px;
+            border-radius: 5px;
+            background-color: white;
+            margin: auto;
+            justify-content: center;
+        }
+
+        .container-foto {
+            justify-content: center;
+            align-items: start;
+            justify-content: space-evenly;
+            display: flex;
+        }
+
+        .container img {
+            width: 300px;
+            height: auto;
+            margin: 17px 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .container img:hover {
+            transform: scale(1.05);
+        }
+
+        .name {
+            text-align: center;
+            color: #ffb0b5;
+            font-family: 'Poppins', sans-serif;
+            margin:auto;
+            transition: transform 0.3s ease;
+        }
+
+        .name:hover {
+            transform: scale(1.05);
+            color: #fc809f;
+        }
+
+        hr {
+            border: 2px solid #ffb0b5;
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-top: -20px;
+        }
+
+        .kesimpulan {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #ff9cb5;
+            font-size: 20px;
+            margin-top: 60px;
+            transition: ease 0.3s;
+        }
+
+        .kesimpulan:hover {
+            transform:translateY(-5px);
+            color: #fc809f;
+        }
+
+        .ringkasan {
+            border: 1px solid #ffc6ca;
+            width: 950px;
+            height: 330px;
+            margin-top: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #ff9cb5;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            color: #ff9cb5;
+            font-weight: 600;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #ffb0b5;
+            font-weight: 600;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .kotak {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .text-biografi {
+            margin-left: 1px;
+            margin-right: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #ff9cb5;
+            font-size: 20px;
+            margin-top: 30px;
+            transition: ease 0.3s;
+        }
+
+        .text-biografi:hover {
+            transform:translateY(-5px);
+            color: #fc809f;
+        }
+
+        .border-biografi {
+            border: 1px solid #ffc6ca;
+            width: 950px;
+            height: 465px;
+            margin-top: 15px;
+            margin-left: 2px;
+            margin-right: 20px;
+        }
+
+        .text-keluarga {
+            margin-left: 1px;
+            margin-right: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #ff9cb5;
+            font-size: 20px;
+            margin-top: 35px;
+            transition: ease 0.3s;
+        }
+
+        .text-keluarga:hover {
+            transform:translateY(-5px);
+            color: #fc809f;
+        }
+
+        .border-keluarga {
+            border: 1px solid #ffc6ca;
+            width: 950px;
+            height: 220px;
+            margin-top: 15px;
+            margin-left: 2px;
+            margin-right: 20px;
+        }
+
+        .container-thumbnail {
+            width: 1000px;
+            height: 1280px;
+            border-radius: 5px;
+            background-color: white;
+            margin: auto;
+            justify-content: center;
+            margin-left: -20px;
+           
+        }
+
+        .text-thumbnail {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #ff9cb5;
+            font-size: 20px;
+            margin: 20px;
+            transition: ease 0.3s;
+        }
+
+        .items-thumbnail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            max-width: 100%;
+        }
+
+        .border-thumbnail {
+            border: 1px solid #ffc6ca;
+            width: 950px;
+            height: 1200px;
+            margin-top: 15px;
+            margin-left: 2px;
+            margin-right: 20px;
+        }
+
+        .thumbnail {
+            width: 700px;
+            height: auto;
+            max-width: 100%;
+            margin: auto;
+            border-radius: 3px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="container-foto">
+        <img src="https://i.pinimg.com/736x/1f/74/fa/1f74faeae0ec93a8288ab2e8bee3ffe7.jpg">
+        <img src="https://i.pinimg.com/1200x/2d/80/66/2d8066e6657a95826544e45fe933eafa.jpg">
+        <img src="https://i.pinimg.com/736x/78/7d/ba/787dbaf17e4134d57a377c3c0aad535d.jpg">
+    </div>
+
+        
+    <div class="name">
+        <h2>──── ୨୧ ────</h2>
+        <h1>♡ Ariana Grande ♡<hr></h1>
+    </div>
+    <div class="kesimpulan">✧ Ringkasan </div>
+    <div class="ringkasan">
+        <div class="kotak">
+            <h3>Tanggal Lahir</h3>
+        <p style="margin-left: 10px; font-family: 'Poppins';">26 Juni 1993 (umur 30 tahun), Boca Raton, Florida, Amerika Serikat</p>
+        </div>
+        <hr style="width: auto; border: 0.1px solid #ffc6ca;">
+        <div class="kotak">
+        <h4>Nama Lahir</h4>
+        <p style="margin-left: 10px; font-family: 'Poppins';">Ariana Grande-Butera</p>
+        </div>
+        <hr style="width: auto; border: 0.1px solid #ffc6ca;">
+        <div class="kotak">
+            <h5>Nama Panggilan</h5>
+            <p style="margin-left: 10px; margin-top: 1dvh; font-family: 'Poppins';">Ari . Little Red . AG    </p>
+        </div>
+        <hr style="width: auto; border: 0.1px solid #ffc6ca;">
+        <div class="kotak">
+            <h6>Tinggi</h6>
+            <p style="margin-left: 10px; margin-top: -12px; font-family: 'Poppins';">1.53 m</p>
+        </div>
+        <div class="text-biografi">✧ Biografi</div>
+        <div class="border-biografi">
+            <p style="margin-left: 10px; margin-right: 10px; font-family:'Poppins'; font-size: 15px; text-align: justify; margin-top: 10px;">
+            Ariana Grande lahir dengan nama Ariana Grande-Butera pada tanggal 26 Juni 1993 di Boca Raton, Florida dari pasangan <a href="https://www.imdb.com/name/nm5546754/?ref_=nmbio_mbio" target="_blank">Joan Grande</a>, seorang kepala eksekutif untuk Hose-McCann Communications & <a href="https://www.imdb.com/name/nm12471512/?ref_=nmbio_mbio" target="_blank">Edward Butera</a>, seorang desainer grafis, fotografer, artis dan pemilik/pendiri Ibi Designs Inc. Kedua orang tuanya adalah keturunan Italia. Ariana membintangi musikal tahun 2008, 13 sebelum menjadi nama rumah tangga melalui perannya di Nickelodeon. Dia muncul sebagai Cat Valentine dalam sitkom jaringan <a href="https://www.imdb.com/title/tt1604099/?ref_=nmbio_mbio" target="_blank">Victorious (2010)</a> dan <a href="https://www.imdb.com/title/tt2487090/?ref_=nmbio_mbio" target="_blank">Sam & Cat (2013)</a>, meminjamkan suaranya untuk karakter Diaspro dalam kebangkitan Nickelodeon dari <a href="https://www.imdb.com/title/tt0421482/?ref_=nmbio_mbio" target="_blank">Winx Club (2004)</a>, dan menjadi bagian dari pemeran utama untuk film TV Nick "Swindle". Sejak itu dia telah muncul dalam peran teater dan televisi lainnya.
+            <p style="margin-left: 10px; margin-right: 10px; font-family:'Poppins'; font-size: 15px; text-align: justify; margin-top: 10px;">
+            Karier musik Ariana dimulai pada tahun 2011 dengan album soundtrack <a href="https://en.wikipedia.org/wiki/Victorious:_Music_from_the_Hit_TV_Show" target="_blank">"Music from Victorious"</a>. Pada tahun 2013, ia merilis album studio pertamanya <a href="https://en.wikipedia.org/wiki/Yours_Truly_(Ariana_Grande_album)" target="_blank">Yours Truly</a>, yang masuk di puncak <a href="https://www.billboard.com/charts/billboard-200/" target="_blank">US Billboard 200</a>. Single utama album itu, <a href="https://en.wikipedia.org/wiki/The_Way_(Ariana_Grande_song)">The Way</a>, dibuka di 10 besar Billboard Hot 100, dengan kritikus membandingkan jangkauan vokalnya yang luas dengan <a href="https://en.wikipedia.org/wiki/Mariah_Carey">Mariah Carey</a>.</p>
+            <p style="margin-left: 10px; margin-right: 10px; font-family:'Poppins'; font-size: 15px; text-align: justify; margin-top: 10px;">Album studio kedua Ariana, <a href="https://en.wikipedia.org/wiki/My_Everything_(Ariana_Grande_album)">My Everything (2014)</a>, masuk di nomor satu di AS dan masuk dalam 10 besar di 24 negara lainnya. Dengan single utama, Problem dan beberapa single lainnya, ia terus menerus berada di 10 besar Billboard Hot 100 selama 34 minggu dan memiliki single 10 teratas terbanyak dari artis mana pun pada tahun 2014. Tahun berikutnya, ia memberikan tur dunia pertamanya, <a href="https://en.wikipedia.org/wiki/The_Honeymoon_Tour">The Honeymoon Tour</a>, untuk mempromosikan My Everything. Pada tahun 2016, ia merilis album studio ketiganya <a href="https://en.wikipedia.org/wiki/Dangerous_Woman">Dangerous Woman</a>, yang menduduki peringkat kedua di Billboard 200. Judul lagu tersebut memulai debutnya di nomor 10 di Billboard Hot 100, menjadikannya orang pertama dalam sejarah tangga lagu itu yang memiliki singel utama dari masing-masing dari tiga album pertama mereka memulai debut dalam 10 besar di AS. Pada tahun 2017, Ariana memberikan <a href="https://en.wikipedia.org/wiki/Dangerous_Woman_Tour">Tur Dangerous Woman</a> internasionalnya.</p>
+        </div>
+        <div class="text-keluarga">✧ Keluarga</div>
+        <div class="border-keluarga">
+            <h6>Pasangan</h6>
+            <p style="margin-left: 119px; margin-top: -67px; font-family: 'Poppins';"> <a href="https://www.imdb.com/name/nm12166304/?ref_=nmbio_sp_1" target="_blank">Dalton Gomez</a> (15 Mei 2021 - 19 Maret 2024) (bercerai)</p>
+            <hr style="width: auto; border: 0.1px solid #ffc6ca;">
+            <h6>Anak </h6>
+            <p style="margin-left: 70px; margin-top: -67px; font-family: 'Poppins';">Tidak ada anak</p>
+            <hr style="width: auto; border: 0.1px solid #ffc6ca;">
+            <h6>Orang Tua</h6>
+            <p style="margin-left: 120px; margin-top: -67px; font-family: 'Poppins';"><a href="https://www.imdb.com/name/nm5546754/?ref_=nmbio_pa_1" target="_blank">Joan Grande</a> dan <a href="https://www.imdb.com/name/nm12471512/?ref_=nmbio_pa_2">Edward Butera</a></p>
+            <hr style="width: auto; border: 0.1px solid #ffc6ca;">
+            <h6>Kerabat</h6>
+            <p style="margin-left: 97px; margin-top: -68px; font-family: 'Poppins';"><a href="https://www.imdb.com/name/nm6444041/?ref_=nmbio_re_1" target="_blank">Frankie Grande</a> (Saudara Tiri)</p>
+        </div>
+
+        <div class="container-thumbnail">
+        <div class="text-thumbnail">✧ Media Sosial
+        <div class="items-thumbnail">
+            <div class="border-thumbnail">
+            <div class="thumbnail">
+                <p style="margin:auto; text-align: center; margin-top: 50px; font-family: 'Poppins'; font-size: 30px;">Youtube</p>
+                <hr style="border: 0.1 solid #ffc6ca; width: 250px;">
+                <a href="https://www.youtube.com/channel/UC9CoOnJkIBMdeijd9qYoT_g" target="_blank"><img src="ari_yt.png" alt="" style="width: 570px;"></a>
+
+                <p style="margin:auto; text-align: center; margin-top: 50px; font-family: 'Poppins'; font-size: 30px;">Instagram</p>
+                <hr style="border: 0.1 solid #ffc6ca; width: 250px;">
+                <a href="https://www.instagram.com/arianagrande/" target="_blank"><img src="ari_ig.png" alt="" style="width: 640px;"></a>
+
+                <p style="margin:auto; text-align: center; margin-top: 50px; font-family: 'Poppins'; font-size: 30px;">Spotify</p>
+                <hr style="border: 0.1 solid #ffc6ca; width: 250px;">
+                <a href="https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR" target="_blank"><img src="ari_spo.png" alt="" style="width: 600px;"></a>
+            </div>
+            </div>
+        </div>
+        </div>  
+    </div>
+
+       
+            
+       
+        
+        
+    
+    
+</body>
+</html>
