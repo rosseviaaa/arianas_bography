@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love letter for Adrian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff5f5, #ffecef, #ffebf3);
+            color: #2b0a0a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 245, 245, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="5" fill="%23ffb7c5" opacity="0.5"/><circle cx="60" cy="40" r="8" fill="%23ff9eb7" opacity="0.4"/><circle cx="80" cy="70" r="6" fill="%23ff85a1" opacity="0.3"/></svg>');
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(216, 30, 91, 0.15);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #d81e5b;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #9d0b32;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 4px;
+            width: 100px;
+            background: linear-gradient(to right, #ff85a1, #d81e5b, #9d0b32);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        .love-icon {
+            color: #d81e5b;
+            font-size: 2rem;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .message-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(216, 30, 91, 0.15);
+        }
+
+        .message-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #3a0e0e;
+            margin-bottom: 30px;
+            text-align: justify; 
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .photo-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 300px;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(216, 30, 91, 0.25);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+
+        .memories-section {
+            background: linear-gradient(135deg, #ffebf3, #ffecef);
+            padding: 50px 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(216, 30, 91, 0.15);
+        }
+
+        .section-title {
+            text-align: center;
+            color: #9d0b32;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ff85a1, #d81e5b);
+            border-radius: 3px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff85a1, #d81e5b, #9d0b32);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #d81e5b;
+            border: 4px solid white;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .left::after {
+            right: -10px;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #d81e5b;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff85a1, #d81e5b);
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(216, 30, 91, 0.2);
+        }
+
+        .closing {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .signature {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        .heart-divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .heart-divider span {
+            margin: 0 15px;
+            color: #d81e5b;
+            font-size: 1.5rem;
+        }
+
+        .heart-divider::before,
+        .heart-divider::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #d81e5b, transparent);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Happy Birthday, Adrian.</h1>
+            <div class="subtitle">A little something from me to you.</div>
+            <div class="love-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+        </header>
+
+        <div class="message-section">
+            <h2 class="section-title">A heartfelt message</h2>
+            <div class="message-text">
+                <p>Sayangku, Adrian Maulana.</p>
+                <p>Di hari yang spesial ini aku pengen bilang sesuatu yang mungkin ngga pernah cukup kalau cuma diucapin lewat kata-kata pendek: terima kasih. Terima kasih karena kamu hadir di hidupku — masuk perlahan, tapi ngisi ruang-ruang gelap yang dulu sering aku takutin. Kamu datang bukan dengan janji yang besar, tapi dengan ketulusan yang sederhana; dan ketulusan itu pelan-pelan nyembuhin bagian-bagian aku yang retak. Aku tahu banyak luka dalam diriku itu bukan karena kamu, tapi kamu yang sabar, yang mau mengerti, yang tetap di sini walau kadang aku susah dimengerti. Itu lebih dari yang bisa aku minta.</p>
+                
+                <p>Cintaku ke kamu tulus. Bukan cinta yang penuh syarat atau drama — cuma rasa yang tenang, yang berdoa setiap malam supaya kamu diberi yang terbaik, yang selalu minta agar kamu sehat, bahagia, dan aman. Doaku buat kamu ngga pernah putus; entah kamu sedih, senang, atau lagi bingung, aku selalu minta yang terbaik untukmu. Semoga setiap langkahmu dimudahkan, setiap mimpi yang kamu kejar diberi jalan, dan setiap tawa yang kamu bagi kembali datang berkali-kali lipat.
+                </p>
+                
+                <p>Maafin aku kalau aku kadang mudah takut, cemburu, atau egois. Maaf kalau aku belum bisa selalu jadi versi terbaik buat kamu. Terima kasih juga karena kamu ngga pernah paksa aku jadi lain; kamu sabar, kamu ingetin dengan lembut saat aku salah, dan kamu tetap kasih ruang saat aku perlu waktu. Cara kamu mencintaiku—dengan sabar, dengan perhatian kecil yang kamu lakukan tanpa disuruh—itu ngasih aku keberanian untuk percaya lagi, untuk berani berharap.</p>
+                
+                <p>Terima kasih karena sudah mencintaiku dengan begitu tulus. Terima kasih karena kamu memilih untuk tetap di sampingku ketika segala sesuatunya terasa ribet dan berat. Terima kasih karena sudah menyembuhkan luka-luka yang bukan kamu buat; kamu nggak cuma jadi pengobat, kamu jadi alasan aku mau bangkit. Aku menghargai setiap kata maafmu, setiap tindakanmu, dan setiap kali kamu pegang tanganku sampai aku merasa aman lagi.</p>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+        <h2 class="section-title">A gallery of Us</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="WhatsApp Image 2025-10-16 at 12.51.03_3b2cc613.jpg">
+                <div class="photo-caption">A spontaneous trip out of town</div>
+            </div>
+            <div class="photo-item">
+                <img src="WhatsApp Image 2025-10-16 at 13.04.22_4f9d338d.jpg">
+                <div class="photo-caption">Stayed out until 12 AM</div>
+            </div>
+            <div class="photo-item">
+                <img src="WhatsApp Image 2025-10-16 at 12.51.07_ba168923.jpg">
+                <div class="photo-caption">Watching movies</div>
+            </div>
+            <div class="photo-item">
+                <img src="WhatsApp Image 2025-10-16 at 12.51.08_22f4c7cc.jpg">
+                <div class="photo-caption">In our comfort place</div>
+            </div>
+            <div class="photo-item">
+                <img src="WhatsApp Image 2025-10-16 at 12.51.09_fbd10075.jpg">
+                <div class="photo-caption">A stay-in date</div>
+            </div>
+            <div class="photo-item">
+                <img src="WhatsApp Image 2025-10-16 at 12.51.10_81c1e7aa.jpg">
+                <div class="photo-caption">Late night movie</div>
+            </div>
+        </div>
+
+        <div class="memories-section">
+            <h2 class="section-title">Our Journey Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">25 December 2024</div>
+                        <p>Aku masih inget jelas pertama kali kita mulai saling notice — waktu itu di truk, sederhana tapi ternyata berkesan. Siapa sangka, udah setahun aja ya.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">26 January 2025</div>
+                        <p>Pertama kali call buat bahas visi misi. Tapi entah kenapa, habis itu obrolannya terus nyambung lewat chat. Topik makin panjang, tawa makin sering, dan tanpa sadar kita makin dekat — day by day.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">11 February 2025</div>
+                        <p>Pertama kali kita akhirnya jujur soal perasaan masing-masing, itu momen yang manis tapi bikin gugup juga. Aku beneran ngerasa super canggung setelahnya, hahaha.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">30 March 2025</div>
+                        <p>That day was a double first — our first date and your first time meeting my family. Aku panik setengah mati, haha. Baru kali ini jalan sama cowo, jadi groginya ngga ketolong!</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">30 April 2025</div>
+                        <p>BOOM!! Our first kiss and hugs — aku masih malu, canggung, dan jujur aja… agak kaget juga. Tapi itu momen yang ga akan pernah aku lupain.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">6 June 2025</div>
+                        <p>Finally... we're official!! After months of being 'something-but-not-official', we finally made it official. Yes, we’re dating — for real this time! HAHAHA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-section">
+            <div class="message-text">
+                <p>Di umur baru ini, aku pengen kamu tahu: aku ada untuk kamu. Aku mau jadi tempat kamu pulang, tempat kamu tertawa paling lepas, dan juga tempat kamu curhat tanpa takut dihakimi. Aku mau nemenin kamu ngerjain mimpi-mimpi kecil dan besarmu. Aku janji akan terus belajar jadi lebih sabar, lebih pengertian, dan lebih berani buat jujur tentang apa yang aku rasain.
+
+                </p>
+                
+                <p>Selamat ulang tahun, sayang. Semoga hari-harimu ke depan penuh cahaya — karena kamu pantas untuk segala kebaikan. Semoga aku bisa terus jadi bagian dari ceritamu, dan semoga kita bisa terus saling jaga, saling percaya, dan saling ngebahagiain. Aku sayang kamu. Terima kasih sudah jadi kamu, yang selalu berhasil bikin aku tersenyum meski hari terasa berat.
+                </p>
+            
+                <p>I love you, always.</p>
+                
+            </div>
+            <div class="heart-divider">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+        </div>
+
+        <footer>
+            <div class="closing">Thank you for being in my life</div>
+            <p>You are the dream that came true</p>
+            <div class="signature">Sincerely yours, Maysha.</div>
+        </footer>
+    </div>
+
+    <script>
+        // Animasi untuk elemen timeline saat di-scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-content');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            timelineItems.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
